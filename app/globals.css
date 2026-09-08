@@ -607,6 +607,13 @@ summary:focus-visible {
   height: 14px;
   flex: none;
 }
+.docs-nav .search-box {
+  margin: 2px 0 14px;
+  padding: 9px 10px;
+}
+.docs-nav .search-box input {
+  font-size: 11px;
+}
 .docs-nav details {
   padding: 10px 0;
 }
@@ -638,9 +645,10 @@ summary:focus-visible {
   color: #b3b3b3;
 }
 .docs-nav details a[aria-current="page"] {
-  border-color: var(--studio-accent);
+  border-left: 2px solid var(--studio-accent);
+  padding-left: 10px;
   color: #ed835d;
-  background: #e1582910;
+  background: transparent;
 }
 .docs-nav a:hover {
   color: #fafafa;
