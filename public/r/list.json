@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "list",
+  "title": "List",
+  "files": [
+    {
+      "path": "components/ui/list.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"cn\"\n\nfunction List({ className, ...props }: React.ComponentProps<\"ul\">) {\n  return (\n    <ul\n      data-slot=\"list\"\n      className={cn(\n        \"w-full overflow-hidden rounded-xl border bg-card font-sans text-card-foreground\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction ListItem({ className, ...props }: React.ComponentProps<\"li\">) {\n  return (\n    <li\n      data-slot=\"list-item\"\n      className={cn(\n        \"group/list-item flex min-h-16 items-center gap-3 border-b px-4 py-3 last:border-b-0\",\n        \"transition-colors hover:bg-muted/40\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction ListItemMedia({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"list-item-media\"\n      className={cn(\n        \"flex shrink-0 items-center justify-center text-muted-foreground [&>svg]:size-5 [&>svg]:shrink-0\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction ListItemContent({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"list-item-content\"\n      className={cn(\"flex min-w-0 flex-1 flex-col gap-0.5\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction ListItemLabel({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"list-item-label\"\n      className={cn(\"text-xs text-muted-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction ListItemValue({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"list-item-value\"\n      className={cn(\"text-sm leading-snug font-medium\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction ListItemAction({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"list-item-action\"\n      className={cn(\"ml-auto flex shrink-0 items-center gap-2\", className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  List,\n  ListItem,\n  ListItemAction,\n  ListItemContent,\n  ListItemLabel,\n  ListItemMedia,\n  ListItemValue,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

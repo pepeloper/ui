@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-state",
+  "title": "Empty State",
+  "description": "An empty view with a next step.",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/default/empty-state/empty-state.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Button } from \"@/components/ui/button\"\n\ntype EmptyStateProps = {\n  title: string\n  description: string\n  actionLabel?: string\n  onAction?: () => void\n  icon?: React.ReactNode\n}\n\nexport function EmptyState({ title, description, actionLabel, onAction, icon }: EmptyStateProps) {\n  return (\n    <div className=\"flex min-h-72 flex-col items-center justify-center rounded-xl border border-dashed p-8 text-center\">\n      {icon ? <div className=\"mb-4 text-muted-foreground\">{icon}</div> : null}\n      <h2 className=\"font-semibold\">{title}</h2>\n      <p className=\"mt-2 max-w-sm text-sm leading-6 text-muted-foreground\">{description}</p>\n      {actionLabel ? <Button className=\"mt-5\" onClick={onAction}>{actionLabel}</Button> : null}\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

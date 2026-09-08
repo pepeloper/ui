@@ -1,0 +1,16 @@
+# Studio UI
+
+Pepe's personal React component collection: shadcn base-rhea, Base UI, Tailwind CSS 4 and TypeScript.
+
+- /docs: quick setup.
+- /docs/{name}: preview, installation, usage, API and source.
+- /r/registry.json: registry index.
+- /r/{name}.json: installable source.
+
+Install with `npx shadcn@latest add <REGISTRY_ORIGIN>/r/button.json`.
+Use the current server origin or NEXT_PUBLIC_REGISTRY_URL.
+
+65 primitives in components/ui; page-header and empty-state in registry/default.
+Use semantic tokens, preserve focus states and label controls. Use Base UI render composition for triggers. Connect demo actions to application handlers.
+
+After source changes: npm run registry:build, npm run docs:check, npm run lint, npm run build.

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker",
+  "title": "Date Picker",
+  "dependencies": [
+    "date-fns"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "components/ui/date-picker.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format, type Locale } from \"date-fns\"\nimport { CalendarDaysIcon } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Calendar } from \"@/components/ui/calendar\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/components/ui/popover\"\nimport { cn } from \"cn\"\n\ntype DatePickerProps = {\n  value?: Date\n  defaultValue?: Date\n  onValueChange?: (date: Date | undefined) => void\n  placeholder?: React.ReactNode\n  dateFormat?: string\n  locale?: Locale\n  disabled?: boolean\n  className?: string\n  calendarClassName?: string\n}\n\nfunction DatePicker({\n  value,\n  defaultValue,\n  onValueChange,\n  placeholder = \"Pick a date\",\n  dateFormat = \"PPP\",\n  locale,\n  disabled = false,\n  className,\n  calendarClassName,\n}: DatePickerProps) {\n  const [internalValue, setInternalValue] = React.useState<Date | undefined>(\n    defaultValue\n  )\n  const [open, setOpen] = React.useState(false)\n  const currentValue = value === undefined ? internalValue : value\n\n  function handleSelect(date: Date | undefined) {\n    if (value === undefined) {\n      setInternalValue(date)\n    }\n\n    onValueChange?.(date)\n    setOpen(false)\n  }\n\n  return (\n    <Popover open={open} onOpenChange={setOpen}>\n      <PopoverTrigger\n        render={\n          <Button\n            variant=\"outline\"\n            disabled={disabled}\n            data-empty={!currentValue}\n            className={cn(\n              \"justify-start text-left font-normal data-[empty=true]:text-muted-foreground\",\n              className\n            )}\n          />\n        }\n      >\n        <CalendarDaysIcon aria-hidden=\"true\" />\n        {currentValue\n          ? format(currentValue, dateFormat, { locale })\n          : placeholder}\n      </PopoverTrigger>\n      <PopoverContent className=\"w-auto p-0\">\n        <Calendar\n          mode=\"single\"\n          selected={currentValue}\n          onSelect={handleSelect}\n          locale={locale}\n          className={calendarClassName}\n        />\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport { DatePicker }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

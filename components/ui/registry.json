@@ -1,0 +1,399 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "files": [{ "path": "accordion.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "files": [{ "path": "alert.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "files": [{ "path": "alert-dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "title": "Aspect Ratio",
+      "files": [{ "path": "aspect-ratio.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "attachment",
+      "type": "registry:ui",
+      "title": "Attachment",
+      "files": [{ "path": "attachment.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "files": [{ "path": "avatar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "files": [{ "path": "badge.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "files": [{ "path": "breadcrumb.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "bubble",
+      "type": "registry:ui",
+      "title": "Bubble",
+      "files": [{ "path": "bubble.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "files": [{ "path": "button.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Button Group",
+      "files": [{ "path": "button-group.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "files": [{ "path": "calendar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "files": [{ "path": "card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "files": [{ "path": "carousel.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "files": [{ "path": "chart.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "files": [{ "path": "checkbox.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "files": [{ "path": "collapsible.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "files": [{ "path": "combobox.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "files": [{ "path": "command.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "files": [{ "path": "context-menu.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "date-input",
+      "type": "registry:ui",
+      "title": "Date Input",
+      "registryDependencies": ["input"],
+      "files": [{ "path": "date-input.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "dependencies": ["date-fns"],
+      "registryDependencies": ["button", "calendar", "popover"],
+      "files": [{ "path": "date-picker.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "files": [{ "path": "dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "direction",
+      "type": "registry:ui",
+      "title": "Direction",
+      "files": [{ "path": "direction.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "files": [{ "path": "drawer.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "files": [{ "path": "dropdown-menu.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "files": [{ "path": "empty.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "files": [{ "path": "field.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "files": [{ "path": "hover-card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "files": [{ "path": "input.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "files": [{ "path": "input-group.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input OTP",
+      "files": [{ "path": "input-otp.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "title": "Item",
+      "files": [{ "path": "item.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "files": [{ "path": "kbd.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "files": [{ "path": "label.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "list",
+      "type": "registry:ui",
+      "title": "List",
+      "files": [{ "path": "list.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "marker",
+      "type": "registry:ui",
+      "title": "Marker",
+      "files": [{ "path": "marker.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "files": [{ "path": "menubar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "message",
+      "type": "registry:ui",
+      "title": "Message",
+      "files": [{ "path": "message.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "message-scroller",
+      "type": "registry:ui",
+      "title": "Message Scroller",
+      "files": [{ "path": "message-scroller.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "native-select",
+      "type": "registry:ui",
+      "title": "Native Select",
+      "files": [{ "path": "native-select.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "files": [{ "path": "navigation-menu.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "files": [{ "path": "pagination.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "password-input",
+      "type": "registry:ui",
+      "title": "Password Input",
+      "registryDependencies": ["button", "input"],
+      "files": [{ "path": "password-input.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "files": [{ "path": "popover.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "files": [{ "path": "progress.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "questionnaire",
+      "type": "registry:ui",
+      "title": "Questionnaire",
+      "files": [{ "path": "questionnaire.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "files": [{ "path": "radio-group.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:ui",
+      "title": "Resizable",
+      "files": [{ "path": "resizable.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "files": [{ "path": "scroll-area.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "files": [{ "path": "select.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "files": [{ "path": "separator.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "files": [{ "path": "sheet.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "files": [{ "path": "sidebar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "files": [{ "path": "skeleton.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "files": [{ "path": "slider.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "files": [{ "path": "spinner.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "files": [{ "path": "switch.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "files": [{ "path": "table.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "files": [{ "path": "tabs.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "files": [{ "path": "textarea.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "files": [{ "path": "toast.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "files": [{ "path": "toggle.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "files": [{ "path": "toggle-group.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "files": [{ "path": "tooltip.tsx", "type": "registry:ui" }]
+    }
+  ]
+}
