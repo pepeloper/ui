@@ -4,6 +4,7 @@ Pepe's personal React component collection: shadcn base-rhea, Base UI, Tailwind 
 
 - /docs: quick setup.
 - /docs/{name}: preview, installation, usage, API and source.
+- /DESIGN.md: shared visual and interaction rules for consuming apps.
 - /r/registry.json: registry index.
 - /r/{name}.json: installable source.
 
