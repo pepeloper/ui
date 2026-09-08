@@ -203,29 +203,27 @@ summary:focus-visible {
   font-size: 13px;
   transition:
     background-color 180ms ease,
-    border-color 180ms ease,
-    backdrop-filter 180ms ease;
+    border-color 180ms ease;
 }
-.site-header.is-scrolled {
-  background: transparent;
-}
-.site-header.is-scrolled::before {
-  content: "";
+.site-header-backdrop {
   position: fixed;
-  z-index: 0;
+  z-index: 39;
   inset: 0 0 auto;
-  height: 78px;
+  height: 72px;
   pointer-events: none;
   background-color: rgb(23 23 23 / 0.1);
-  backdrop-filter: blur(24px) saturate(115%);
   -webkit-backdrop-filter: blur(24px) saturate(115%);
+  will-change: backdrop-filter;
+  opacity: 0;
+  transition: opacity 180ms ease;
 }
-.site-header.is-scrolled > * {
-  position: relative;
-  z-index: 1;
+.site-header-backdrop.is-visible {
+  opacity: 1;
 }
-.site-header.is-scrolled > .skip-link {
-  position: absolute;
+@supports (backdrop-filter: blur(1px)) {
+  .site-header-backdrop {
+    backdrop-filter: blur(24px) saturate(115%);
+  }
 }
 .wordmark {
   font-size: 17px;
