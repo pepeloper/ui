@@ -16,7 +16,13 @@ function DetailListLabel({ className, ...props }: React.ComponentProps<"dt">) {
 }
 
 function DetailListValue({ className, ...props }: React.ComponentProps<"dd">) {
-  return <dd data-slot="detail-list-value" className={cn("text-sm font-medium", className)} {...props} />
+  return (
+    <dd
+      data-slot="detail-list-value"
+      className={cn("text-sm font-medium sm:justify-self-end sm:text-right", className)}
+      {...props}
+    />
+  )
 }
 
 export { DetailList, DetailListItem, DetailListLabel, DetailListValue }

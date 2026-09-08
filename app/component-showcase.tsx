@@ -301,6 +301,7 @@ import {
   SectionShellHeader,
   SectionShellNav,
   SectionShellNavItem,
+  SectionShellPanel,
   SectionShellTitle,
 } from "@/components/ui/section-shell"
 import {
@@ -446,6 +447,7 @@ export function LiveSpecimens({
   const [switchOn, setSwitchOn] = useState(false)
   const [progress, setProgress] = useState(68)
   const [collapsed, setCollapsed] = useState(false)
+  const [sectionTab, setSectionTab] = useState("general")
 
   const component = (name: string) => {
     const result = getComponent(name)
@@ -1384,7 +1386,11 @@ export function LiveSpecimens({
         </PreviewCard>
 
         <PreviewCard component={component("section-shell")}>
-          <SectionShell className="w-full max-w-md">
+          <SectionShell
+            className="w-full max-w-md"
+            value={sectionTab}
+            onValueChange={setSectionTab}
+          >
             <SectionShellHeader>
               <div>
                 <SectionShellTitle>Project settings</SectionShellTitle>
@@ -1392,12 +1398,14 @@ export function LiveSpecimens({
               </div>
             </SectionShellHeader>
             <SectionShellNav aria-label="Project settings sections">
-              <SectionShellNavItem active>General</SectionShellNavItem>
-              <SectionShellNavItem>Members</SectionShellNavItem>
-              <SectionShellNavItem>Billing</SectionShellNavItem>
+              <SectionShellNavItem value="general">General</SectionShellNavItem>
+              <SectionShellNavItem value="members">Members</SectionShellNavItem>
+              <SectionShellNavItem value="billing">Billing</SectionShellNavItem>
             </SectionShellNav>
             <SectionShellContent className="rounded-xl border p-3 text-sm text-muted-foreground">
-              General settings content
+              <SectionShellPanel value="general">General settings content</SectionShellPanel>
+              <SectionShellPanel value="members">Members settings content</SectionShellPanel>
+              <SectionShellPanel value="billing">Billing settings content</SectionShellPanel>
             </SectionShellContent>
           </SectionShell>
         </PreviewCard>
