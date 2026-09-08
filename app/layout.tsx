@@ -27,6 +27,11 @@ export default function RootLayout({
       className={`dark ${geistSans.variable} ${geistMono.variable}`}
     >
       <body>
+        <script
+          defer
+          src="https://signal.on-forge.com/tracker.js"
+          data-site="97Vb2im5w1arbH5xwoD3Ipd0mElvurbB"
+        />
         <TooltipProvider>
           <ScrollReset />
           <SiteHeader />
