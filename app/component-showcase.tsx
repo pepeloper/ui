@@ -505,7 +505,7 @@ export function LiveSpecimens({
         <PreviewCard component={component("input")}>
           <div className="w-full max-w-xs space-y-2">
             <Label htmlFor="showcase-input">Project name</Label>
-            <Input id="showcase-input" placeholder="e.g. Studio UI" />
+            <Input id="showcase-input" placeholder="e.g. pepeloper/ui" />
           </div>
         </PreviewCard>
 
@@ -699,7 +699,7 @@ export function LiveSpecimens({
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="#">Studio UI</BreadcrumbLink>
+                <BreadcrumbLink href="#">pepeloper/ui</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator>
                 <ChevronRightIcon />
@@ -997,7 +997,7 @@ export function LiveSpecimens({
           <FormField id="showcase-form-field" invalid className="w-full max-w-xs">
             <FormFieldLabel>Project name</FormFieldLabel>
             <FormFieldControl>
-              <Input defaultValue="Studio UI" />
+              <Input defaultValue="pepeloper/ui" />
             </FormFieldControl>
             <FormFieldDescription>Shown in your workspace navigation.</FormFieldDescription>
             <FormFieldError>Choose a name with at least three characters.</FormFieldError>
@@ -1075,7 +1075,7 @@ export function LiveSpecimens({
               @studio
             </HoverCardTrigger>
             <HoverCardContent>
-              <p className="text-sm font-medium">Studio UI</p>
+              <p className="text-sm font-medium">pepeloper/ui</p>
               <p className="mt-1 text-xs text-muted-foreground">
                 A source-first component registry.
               </p>
@@ -1309,7 +1309,7 @@ export function LiveSpecimens({
         <PreviewCard component={component("label")}>
           <div className="w-full max-w-xs space-y-2">
             <Label htmlFor="standalone-label">Workspace name</Label>
-            <Input id="standalone-label" defaultValue="Studio UI" />
+            <Input id="standalone-label" defaultValue="pepeloper/ui" />
           </div>
         </PreviewCard>
 

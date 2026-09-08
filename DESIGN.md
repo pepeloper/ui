@@ -1,12 +1,12 @@
-# PepeUI Design
+# pepeloper/ui Design
 
-Guía compartida para las aplicaciones que consumen PepeUI. Este documento define
+Guía compartida para las aplicaciones que consumen `pepeloper/ui`. Este documento define
 las decisiones que deben mantenerse cuando una app compone sus propias pantallas
 con los componentes del registry.
 
 ## Intención
 
-PepeUI usa una interfaz oscura, sobria y orientada al contenido. La interfaz debe
+`pepeloper/ui` usa una interfaz oscura, sobria y orientada al contenido. La interfaz debe
 sentirse precisa y tranquila: una jerarquía tipográfica clara, un solo color de
 acción, superficies cercanas entre sí y estados interactivos fáciles de leer.
 

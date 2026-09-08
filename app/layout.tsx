@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Studio UI — Registry",
+  title: "pepeloper/ui — Registry",
   description: "My personal UI component collection.",
 }
 

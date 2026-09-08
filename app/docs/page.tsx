@@ -3,7 +3,7 @@ import Link from "next/link"
 import { CodeBlock, InstallCommand } from "../code-block"
 import { DocsNav } from "./docs-nav"
 
-export const metadata: Metadata = { title: "Quick setup — Studio UI" }
+export const metadata: Metadata = { title: "Quick setup — pepeloper/ui" }
 
 export default function DocsPage() {
   return (

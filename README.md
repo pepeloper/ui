@@ -1,4 +1,4 @@
-# Studio UI
+# pepeloper/ui
 
 My personal collection of React components and blocks.
 
@@ -63,9 +63,10 @@ npx shadcn@latest add https://your-domain.example/r/button.json
 npx shadcn@latest add https://your-domain.example/r/date-picker.json
 ```
 
-For a reusable namespace, configure it once in each app:
+For a reusable CLI namespace, configure it once in each app. The repository name
+remains `pepeloper/ui`; the CLI alias cannot contain `/`:
 
 ```sh
-npx shadcn@latest registry add @pepeui=https://your-domain.example/r/{name}.json
-npx shadcn@latest add @pepeui/date-picker
+npx shadcn@latest registry add @pepeloper-ui=https://your-domain.example/r/{name}.json
+npx shadcn@latest add @pepeloper-ui/date-picker
 ```

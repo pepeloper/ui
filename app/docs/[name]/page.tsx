@@ -38,7 +38,7 @@ export async function generateMetadata({
   const { name } = await params
   const component = catalog.find((c) => c.name === name)
   return {
-    title: `${component?.label ?? "Component"} — Studio UI`,
+    title: `${component?.label ?? "Component"} — pepeloper/ui`,
     description: component?.description,
   }
 }

@@ -1,6 +1,6 @@
-# Studio UI
+# pepeloper/ui
 
-Pepe's personal React component collection: shadcn base-rhea, Base UI, Tailwind CSS 4 and TypeScript.
+`pepeloper/ui` is a personal React component collection: shadcn base-rhea, Base UI, Tailwind CSS 4 and TypeScript.
 
 - /docs: quick setup.
 - /docs/{name}: preview, installation, usage, API and source.

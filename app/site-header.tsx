@@ -24,7 +24,7 @@ export function SiteHeader() {
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <Link href="/" className="wordmark" aria-label="Pepeloper UI, home">
+        <Link href="/" className="wordmark" aria-label="pepeloper/ui, home">
           pepeloper<span>/ ui</span>
         </Link>
         <nav aria-label="Main navigation">
