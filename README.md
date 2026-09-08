@@ -44,7 +44,15 @@ The build generates API signatures and static docs. Set `NEXT_PUBLIC_REGISTRY_UR
 
 ## Publish the registry
 
-Deploy the project to Vercel or another Next.js host. The public registry is the generated `public/r/registry.json` plus the individual `/r/{name}.json` items.
+This repository is public, so it can already be consumed as a GitHub registry. The generated `public/r/registry.json` and individual `/r/{name}.json` files are also ready to serve from a Next.js host.
+
+Install directly from GitHub:
+
+```sh
+npx shadcn@latest add pepeloper/ui/date-picker
+```
+
+The GitHub source registry does not require a Vercel deployment. Use Vercel or another Next.js host when you also want the searchable demo and documentation online.
 
 Set `NEXT_PUBLIC_REGISTRY_URL` to the canonical site origin before building so the docs copy the correct install commands. Update `homepage` in `registry.json` to the same origin, then run `npm run registry:build` and deploy again.
 

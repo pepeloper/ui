@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "pepeui",
-  "homepage": "https://ui.example.com",
+  "homepage": "https://github.com/pepeloper/ui",
   "include": ["components/ui/registry.json"],
   "items": [
     {
