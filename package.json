@@ -14,7 +14,8 @@
     "typecheck": "tsc --noEmit",
     "docs:check": "node scripts/check-doc-examples.mjs",
     "docs:build": "node scripts/build-doc-api.mjs",
-    "prebuild": "npm run docs:build"
+    "design:sync": "node scripts/sync-design.mjs",
+    "prebuild": "npm run docs:build && npm run design:sync"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
