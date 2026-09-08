@@ -15,7 +15,7 @@ export function SiteHeader() {
   }, [])
 
   return (
-    <header className={`site-header${isScrolled ? "is-scrolled" : ""}`}>
+    <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
       <a className="skip-link" href="#main">
         Skip to content
       </a>
