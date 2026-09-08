@@ -207,9 +207,25 @@ summary:focus-visible {
     backdrop-filter 180ms ease;
 }
 .site-header.is-scrolled {
-  background-color: rgb(0 0 0 / 0.2);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: transparent;
+}
+.site-header.is-scrolled::before {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  inset: 0 0 auto;
+  height: 78px;
+  pointer-events: none;
+  background-color: rgb(23 23 23 / 0.1);
+  backdrop-filter: blur(24px) saturate(115%);
+  -webkit-backdrop-filter: blur(24px) saturate(115%);
+}
+.site-header.is-scrolled > * {
+  position: relative;
+  z-index: 1;
+}
+.site-header.is-scrolled > .skip-link {
+  position: absolute;
 }
 .wordmark {
   font-size: 17px;
