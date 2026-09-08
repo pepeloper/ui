@@ -107,6 +107,7 @@ import {
   CommandList,
   CommandShortcut,
 } from "@/components/ui/command"
+import { CommandPalette } from "@/components/ui/command-palette"
 import {
   ContextMenu,
   ContextMenuContent,
@@ -160,6 +161,13 @@ import {
   FieldLabel,
   FieldSet,
 } from "@/components/ui/field"
+import {
+  FormField,
+  FormFieldControl,
+  FormFieldDescription,
+  FormFieldError,
+  FormFieldLabel,
+} from "@/components/ui/form-field"
 import {
   HoverCard,
   HoverCardContent,
@@ -243,6 +251,24 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Progress, ProgressLabel } from "@/components/ui/progress"
+import { DetailList, DetailListItem, DetailListLabel, DetailListValue } from "@/components/ui/detail-list"
+import { ResourceList, ResourceRow } from "@/components/ui/resource-list"
+import {
+  ResponsiveDialog,
+  ResponsiveDialogContent,
+  ResponsiveDialogDescription,
+  ResponsiveDialogHeader,
+  ResponsiveDialogTitle,
+  ResponsiveDialogTrigger,
+} from "@/components/ui/responsive-dialog"
+import {
+  ResponsiveSheet,
+  ResponsiveSheetContent,
+  ResponsiveSheetDescription,
+  ResponsiveSheetHeader,
+  ResponsiveSheetTitle,
+  ResponsiveSheetTrigger,
+} from "@/components/ui/responsive-sheet"
 import {
   Questionnaire,
   QuestionnaireChoice,
@@ -269,6 +295,27 @@ import {
 } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
 import {
+  SectionShell,
+  SectionShellContent,
+  SectionShellDescription,
+  SectionShellHeader,
+  SectionShellNav,
+  SectionShellNavItem,
+  SectionShellTitle,
+} from "@/components/ui/section-shell"
+import {
+  SettingsCard,
+  SettingsCardContent,
+  SettingsCardDescription,
+  SettingsCardHeader,
+  SettingsCardTitle,
+  SettingsRow,
+  SettingsRowControl,
+  SettingsRowDescription,
+  SettingsRowLabel,
+  SettingsRowTitle,
+} from "@/components/ui/settings-card"
+import {
   Sheet,
   SheetContent,
   SheetDescription,
@@ -290,6 +337,7 @@ import {
 import { Skeleton } from "@/components/ui/skeleton"
 import { Slider } from "@/components/ui/slider"
 import { Spinner } from "@/components/ui/spinner"
+import { StateBadge } from "@/components/ui/state-badge"
 import { Switch } from "@/components/ui/switch"
 import {
   Table,
@@ -692,6 +740,25 @@ export function LiveSpecimens({
           </Dialog>
         </PreviewCard>
 
+        <PreviewCard component={component("responsive-dialog")}>
+          <ResponsiveDialog>
+            <ResponsiveDialogTrigger render={<Button variant="outline" />}>
+              Open responsive dialog
+            </ResponsiveDialogTrigger>
+            <ResponsiveDialogContent>
+              <ResponsiveDialogHeader>
+                <ResponsiveDialogTitle>Review changes</ResponsiveDialogTitle>
+                <ResponsiveDialogDescription>
+                  The same API uses a dialog on desktop and a swipeable drawer on mobile.
+                </ResponsiveDialogDescription>
+              </ResponsiveDialogHeader>
+              <p className="px-4 pb-4 text-sm text-muted-foreground">
+                Content stays scrollable when the surface grows.
+              </p>
+            </ResponsiveDialogContent>
+          </ResponsiveDialog>
+        </PreviewCard>
+
         <PreviewCard component={component("dropdown-menu")}>
           <DropdownMenu>
             <DropdownMenuTrigger render={<Button variant="outline" />}>
@@ -722,6 +789,35 @@ export function LiveSpecimens({
               </PopoverHeader>
             </PopoverContent>
           </Popover>
+        </PreviewCard>
+
+        <PreviewCard component={component("responsive-sheet")}>
+          <ResponsiveSheet>
+            <ResponsiveSheetTrigger render={<Button variant="outline" />}>
+              Open responsive sheet
+            </ResponsiveSheetTrigger>
+            <ResponsiveSheetContent>
+              <ResponsiveSheetHeader>
+                <ResponsiveSheetTitle>Inspector</ResponsiveSheetTitle>
+                <ResponsiveSheetDescription>
+                  A side panel that becomes a bottom drawer on mobile.
+                </ResponsiveSheetDescription>
+              </ResponsiveSheetHeader>
+              <div className="px-6 pb-6 text-sm text-muted-foreground">
+                Useful for contextual settings and detail views.
+              </div>
+            </ResponsiveSheetContent>
+          </ResponsiveSheet>
+        </PreviewCard>
+
+        <PreviewCard component={component("command-palette")}>
+          <CommandPalette
+            items={[
+              { value: "components", label: "Browse components", group: "Navigate" },
+              { value: "registry", label: "Open registry", group: "Navigate" },
+              { value: "copy", label: "Copy install command", group: "Actions" },
+            ]}
+          />
         </PreviewCard>
 
         <PreviewCard component={component("tooltip")}>
@@ -893,6 +989,17 @@ export function LiveSpecimens({
               </FieldDescription>
             </Field>
           </FieldSet>
+        </PreviewCard>
+
+        <PreviewCard component={component("form-field")}>
+          <FormField id="showcase-form-field" invalid className="w-full max-w-xs">
+            <FormFieldLabel>Project name</FormFieldLabel>
+            <FormFieldControl>
+              <Input defaultValue="Studio UI" />
+            </FormFieldControl>
+            <FormFieldDescription>Shown in your workspace navigation.</FormFieldDescription>
+            <FormFieldError>Choose a name with at least three characters.</FormFieldError>
+          </FormField>
         </PreviewCard>
 
         <PreviewCard component={component("item")}>
@@ -1234,6 +1341,73 @@ export function LiveSpecimens({
               </ListItemContent>
             </ListItem>
           </List>
+        </PreviewCard>
+
+        <PreviewCard component={component("resource-list")}>
+          <ResourceList className="w-full max-w-md">
+            <ResourceRow title="Design system" subtitle="Updated 2 minutes ago" fallback="DS" href="#" />
+            <ResourceRow title="Marketing site" subtitle="Updated yesterday" fallback="MS" href="#" />
+          </ResourceList>
+        </PreviewCard>
+
+        <PreviewCard component={component("detail-list")}>
+          <DetailList className="w-full max-w-md">
+            <DetailListItem>
+              <DetailListLabel>Environment</DetailListLabel>
+              <DetailListValue>Production</DetailListValue>
+            </DetailListItem>
+            <DetailListItem>
+              <DetailListLabel>Last deployment</DetailListLabel>
+              <DetailListValue>Today at 09:42</DetailListValue>
+            </DetailListItem>
+          </DetailList>
+        </PreviewCard>
+
+        <PreviewCard component={component("settings-card")}>
+          <SettingsCard className="w-full max-w-md">
+            <SettingsCardHeader>
+              <div>
+                <SettingsCardTitle>Preferences</SettingsCardTitle>
+                <SettingsCardDescription>Keep the workspace focused.</SettingsCardDescription>
+              </div>
+            </SettingsCardHeader>
+            <SettingsCardContent>
+              <SettingsRow>
+                <SettingsRowLabel>
+                  <SettingsRowTitle>Email updates</SettingsRowTitle>
+                  <SettingsRowDescription>Occasional product notes.</SettingsRowDescription>
+                </SettingsRowLabel>
+                <SettingsRowControl><Switch defaultChecked /></SettingsRowControl>
+              </SettingsRow>
+            </SettingsCardContent>
+          </SettingsCard>
+        </PreviewCard>
+
+        <PreviewCard component={component("section-shell")}>
+          <SectionShell className="w-full max-w-md">
+            <SectionShellHeader>
+              <div>
+                <SectionShellTitle>Project settings</SectionShellTitle>
+                <SectionShellDescription>Organize related views without coupling navigation.</SectionShellDescription>
+              </div>
+            </SectionShellHeader>
+            <SectionShellNav aria-label="Project settings sections">
+              <SectionShellNavItem active>General</SectionShellNavItem>
+              <SectionShellNavItem>Members</SectionShellNavItem>
+              <SectionShellNavItem>Billing</SectionShellNavItem>
+            </SectionShellNav>
+            <SectionShellContent className="rounded-xl border p-3 text-sm text-muted-foreground">
+              General settings content
+            </SectionShellContent>
+          </SectionShell>
+        </PreviewCard>
+
+        <PreviewCard component={component("state-badge")}>
+          <div className="flex flex-wrap items-center gap-2">
+            <StateBadge state="Ready" />
+            <StateBadge state="Pending" />
+            <StateBadge state="Failed" />
+          </div>
         </PreviewCard>
 
         <PreviewCard component={component("menubar")}>

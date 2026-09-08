@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resource-list",
+  "title": "Resource List",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "components/ui/resource-list.tsx",
+      "content": "import * as React from \"react\"\nimport { ChevronRightIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { cn } from \"cn\"\n\nfunction ResourceList({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"resource-list\"\n      className={cn(\"overflow-hidden rounded-2xl border bg-card text-card-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\ntype ResourceRowProps = React.ComponentProps<\"div\"> & {\n  href?: string\n  avatar?: string\n  fallback?: React.ReactNode\n  title: React.ReactNode\n  subtitle?: React.ReactNode\n  trailing?: React.ReactNode\n  showChevron?: boolean\n}\n\nfunction ResourceRow({\n  className,\n  href,\n  avatar,\n  fallback,\n  title,\n  subtitle,\n  trailing,\n  showChevron = Boolean(href),\n  ...props\n}: ResourceRowProps) {\n  const Component = (href ? \"a\" : \"div\") as React.ElementType\n  return (\n    <Component\n      data-slot=\"resource-row\"\n      href={href}\n      className={cn(\n        \"group/resource-row flex min-w-0 items-center gap-3 border-b px-4 py-3 last:border-b-0\",\n        \"transition-colors hover:bg-muted/40\",\n        href && \"focus-visible:bg-muted/40 focus-visible:outline-none\",\n        className\n      )}\n      {...props}\n    >\n      {(avatar || fallback) && (\n        <Avatar size=\"sm\" className=\"shrink-0\">\n          {avatar && <AvatarImage src={avatar} alt=\"\" />}\n          <AvatarFallback>{fallback}</AvatarFallback>\n        </Avatar>\n      )}\n      <div className=\"min-w-0 flex-1\">\n        <div className=\"truncate text-sm font-medium\">{title}</div>\n        {subtitle && <div className=\"truncate text-xs text-muted-foreground\">{subtitle}</div>}\n      </div>\n      {trailing}\n      {showChevron && <ChevronRightIcon className=\"size-4 shrink-0 text-muted-foreground\" />}\n    </Component>\n  )\n}\n\nexport { ResourceList, ResourceRow }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "state-badge",
+  "title": "State Badge",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "components/ui/state-badge.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Badge, badgeVariants } from \"@/components/ui/badge\"\nimport { cn } from \"cn\"\nimport type { VariantProps } from \"class-variance-authority\"\n\ntype StateBadgeProps = React.ComponentProps<typeof Badge> & {\n  state: string\n  dot?: boolean\n  labels?: Record<string, React.ReactNode>\n}\n\nfunction StateBadge({ state, labels, dot = true, className, ...props }: StateBadgeProps) {\n  const normalized = state.toLowerCase()\n  const variant: VariantProps<typeof badgeVariants>[\"variant\"] =\n    normalized.includes(\"error\") || normalized.includes(\"fail\") || normalized.includes(\"danger\")\n      ? \"destructive\"\n      : normalized.includes(\"success\") || normalized.includes(\"ready\") || normalized.includes(\"active\")\n        ? \"secondary\"\n        : normalized.includes(\"warn\") || normalized.includes(\"pending\")\n          ? \"outline\"\n          : \"ghost\"\n\n  return (\n    <Badge variant={variant} className={cn(\"gap-1.5\", className)} {...props}>\n      {dot && <span aria-hidden=\"true\" className=\"size-1.5 rounded-full bg-current opacity-70\" />}\n      {labels?.[state] ?? state}\n    </Badge>\n  )\n}\n\nexport { StateBadge }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

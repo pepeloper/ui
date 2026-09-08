@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-field",
+  "title": "Form Field",
+  "registryDependencies": [
+    "label"
+  ],
+  "files": [
+    {
+      "path": "components/ui/form-field.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Label } from \"@/components/ui/label\"\nimport { cn } from \"cn\"\n\ntype FormFieldContextValue = {\n  controlId: string\n  descriptionId: string\n  errorId: string\n  invalid: boolean\n}\n\nconst FormFieldContext = React.createContext<FormFieldContextValue | null>(null)\n\nfunction useFormField() {\n  const context = React.useContext(FormFieldContext)\n  if (!context) throw new Error(\"Form field parts must be used inside FormField.\")\n  return context\n}\n\nfunction FormField({\n  className,\n  id,\n  invalid = false,\n  children,\n  ...props\n}: React.ComponentProps<\"div\"> & { id?: string; invalid?: boolean }) {\n  const generatedId = React.useId()\n  const controlId = id ?? `field-${generatedId}`\n  const context = React.useMemo(\n    () => ({\n      controlId,\n      descriptionId: `${controlId}-description`,\n      errorId: `${controlId}-error`,\n      invalid,\n    }),\n    [controlId, invalid]\n  )\n\n  return (\n    <FormFieldContext.Provider value={context}>\n      <div data-slot=\"form-field\" className={cn(\"grid gap-2\", className)} {...props}>\n        {children}\n      </div>\n    </FormFieldContext.Provider>\n  )\n}\n\nfunction FormFieldLabel({ className, ...props }: React.ComponentProps<typeof Label>) {\n  const { controlId } = useFormField()\n  return <Label htmlFor={controlId} className={className} {...props} />\n}\n\nfunction FormFieldControl({ children }: { children: React.ReactElement }) {\n  const { controlId, descriptionId, errorId, invalid } = useFormField()\n  const describedBy = `${descriptionId} ${errorId}`\n\n  return React.cloneElement(children, {\n    id: controlId,\n    \"aria-describedby\": describedBy,\n    \"aria-invalid\": invalid || undefined,\n  } as React.HTMLAttributes<HTMLElement>)\n}\n\nfunction FormFieldDescription({ className, ...props }: React.ComponentProps<\"p\">) {\n  const { descriptionId } = useFormField()\n  return (\n    <p\n      id={descriptionId}\n      data-slot=\"form-field-description\"\n      className={cn(\"text-sm text-muted-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction FormFieldError({ className, children, ...props }: React.ComponentProps<\"p\">) {\n  const { errorId } = useFormField()\n  if (!children) return null\n  return (\n    <p\n      id={errorId}\n      role=\"alert\"\n      data-slot=\"form-field-error\"\n      className={cn(\"text-sm text-destructive\", className)}\n      {...props}\n    >\n      {children}\n    </p>\n  )\n}\n\nexport {\n  FormField,\n  FormFieldControl,\n  FormFieldDescription,\n  FormFieldError,\n  FormFieldLabel,\n  useFormField,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

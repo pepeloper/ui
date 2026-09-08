@@ -399,6 +399,60 @@ export const componentCatalog: ComponentDefinition[] = [
     category: "Overlay",
     description: "A hint on hover or focus.",
   },
+  {
+    name: "responsive-dialog",
+    label: "Responsive Dialog",
+    category: "Overlay",
+    description: "A dialog that becomes a swipeable drawer on small screens.",
+  },
+  {
+    name: "responsive-sheet",
+    label: "Responsive Sheet",
+    category: "Overlay",
+    description: "A side sheet that becomes a mobile drawer.",
+  },
+  {
+    name: "form-field",
+    label: "Form Field",
+    category: "Forms",
+    description: "Accessible labels, descriptions and validation wiring.",
+  },
+  {
+    name: "command-palette",
+    label: "Command Palette",
+    category: "Navigation",
+    description: "Keyboard-first search for actions and destinations.",
+  },
+  {
+    name: "settings-card",
+    label: "Settings Card",
+    category: "Layout",
+    description: "Grouped settings with consistent row structure.",
+  },
+  {
+    name: "resource-list",
+    label: "Resource List",
+    category: "Content",
+    description: "Navigable rows for people, projects and resources.",
+  },
+  {
+    name: "detail-list",
+    label: "Detail List",
+    category: "Content",
+    description: "Readable label and value pairs for detail views.",
+  },
+  {
+    name: "section-shell",
+    label: "Section Shell",
+    category: "Layout",
+    description: "A heading, navigation and content frame for settings or details.",
+  },
+  {
+    name: "state-badge",
+    label: "State Badge",
+    category: "Feedback",
+    description: "Semantic status labels with a lightweight indicator.",
+  },
 ]
 
 export const catalogCategories: ComponentCategory[] = [

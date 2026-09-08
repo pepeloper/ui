@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-is-mobile",
+  "title": "useIsMobile",
+  "files": [
+    {
+      "path": "components/ui/use-is-mobile.ts",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nconst MOBILE_BREAKPOINT = 768\n\nfunction useIsMobile() {\n  const subscribe = React.useCallback((onStoreChange: () => void) => {\n    const mediaQuery = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)\n    mediaQuery.addEventListener(\"change\", onStoreChange)\n    return () => mediaQuery.removeEventListener(\"change\", onStoreChange)\n  }, [])\n\n  const getSnapshot = React.useCallback(() => window.innerWidth < MOBILE_BREAKPOINT, [])\n  const getServerSnapshot = React.useCallback(() => false, [])\n\n  return React.useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)\n}\n\nexport { useIsMobile }\n",
+      "type": "registry:hook"
+    }
+  ],
+  "type": "registry:hook"
+}

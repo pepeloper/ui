@@ -273,6 +273,7 @@
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
+      "registryDependencies": ["drawer", "use-is-mobile"],
       "files": [{ "path": "popover.tsx", "type": "registry:ui" }]
     },
     {
@@ -394,6 +395,72 @@
       "type": "registry:ui",
       "title": "Tooltip",
       "files": [{ "path": "tooltip.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "use-is-mobile",
+      "type": "registry:hook",
+      "title": "useIsMobile",
+      "files": [{ "path": "use-is-mobile.ts", "type": "registry:hook" }]
+    },
+    {
+      "name": "responsive-dialog",
+      "type": "registry:ui",
+      "title": "Responsive Dialog",
+      "registryDependencies": ["button", "dialog", "drawer", "use-is-mobile"],
+      "files": [{ "path": "responsive-dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "responsive-sheet",
+      "type": "registry:ui",
+      "title": "Responsive Sheet",
+      "registryDependencies": ["button", "drawer", "sheet", "use-is-mobile"],
+      "files": [{ "path": "responsive-sheet.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "form-field",
+      "type": "registry:ui",
+      "title": "Form Field",
+      "registryDependencies": ["label"],
+      "files": [{ "path": "form-field.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "command-palette",
+      "type": "registry:ui",
+      "title": "Command Palette",
+      "registryDependencies": ["button", "command", "kbd"],
+      "files": [{ "path": "command-palette.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "settings-card",
+      "type": "registry:ui",
+      "title": "Settings Card",
+      "files": [{ "path": "settings-card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "resource-list",
+      "type": "registry:ui",
+      "title": "Resource List",
+      "registryDependencies": ["avatar"],
+      "files": [{ "path": "resource-list.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "detail-list",
+      "type": "registry:ui",
+      "title": "Detail List",
+      "files": [{ "path": "detail-list.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "section-shell",
+      "type": "registry:ui",
+      "title": "Section Shell",
+      "files": [{ "path": "section-shell.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "state-badge",
+      "type": "registry:ui",
+      "title": "State Badge",
+      "registryDependencies": ["badge"],
+      "files": [{ "path": "state-badge.tsx", "type": "registry:ui" }]
     }
   ]
 }
