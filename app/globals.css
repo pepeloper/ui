@@ -207,15 +207,11 @@ summary:focus-visible {
     backdrop-filter 180ms ease;
 }
 .site-header.is-scrolled {
-  background:
-    linear-gradient(180deg, rgb(255 255 255 / 0.1), rgb(255 255 255 / 0.045)),
-    color-mix(in srgb, #171717 68%, transparent);
-  border-bottom: 1px solid rgb(255 255 255 / 0.14);
-  box-shadow:
-    0 12px 32px rgb(0 0 0 / 0.2),
-    inset 0 1px rgb(255 255 255 / 0.06);
-  backdrop-filter: blur(24px) saturate(160%);
-  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  background-color: rgb(0 0 0 / 0.42);
+  border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 .wordmark {
   font-size: 17px;
