@@ -29,7 +29,7 @@ export default function RootLayout({
       <body>
         <script
           defer
-          src="https://signal.on-forge.com/tracker.js"
+          src="https://shipwake.dev/tracker.js"
           data-site="97Vb2im5w1arbH5xwoD3Ipd0mElvurbB"
         />
         <TooltipProvider>
